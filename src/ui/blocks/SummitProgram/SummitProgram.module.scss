@@ -1,0 +1,140 @@
+.summitProgram {
+    padding-top: 80px;
+    padding-bottom: 60px;
+
+    @media screen and (min-width: $toggleDesktop) {
+        padding-top: 160px;
+        padding-bottom: 140px;
+    }
+
+    .title {
+        color: #4E77D3;
+        text-align: center;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 900;
+        line-height: 130%;
+        text-transform: uppercase;
+
+        @media screen and (min-width: $toggleDesktop) {
+            font-size: 16px;
+        }
+    }
+
+    .description {
+        color: #121212;
+        text-align: center;
+        font-family: "NAMU";
+        font-size: 28px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 130%;
+
+        span {
+            color: #4E77D3;
+        }
+
+        @media screen and (min-width: $toggleDesktop) {
+            font-size: 38px;
+        }
+    }
+
+    .mainBlock {
+        max-width: 980px;
+        margin: 68px auto 0;
+
+        @media screen and (min-width: $toggleDesktop) {
+            margin: 32px auto 0;
+        }
+    }
+
+    .dayBlock {
+        position: relative;
+        margin-bottom: 64px;
+        padding: 24px;
+        border-radius: 0 16px 16px 0;
+        background: #F8F8F8;
+
+        @media screen and (min-width: $toggleDesktop) {
+            margin-bottom: 24px;
+            padding: 46px 32px;
+        }
+
+        .dayHeader {
+            position: absolute;
+            top: -41px;
+            left: 0;
+            padding: 10px 24px;
+            display: inline-block;
+            color: #FFF;
+            text-wrap: nowrap;
+            text-align: center;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 900;
+            line-height: 130%;
+            text-transform: uppercase;
+            background: #4E77D3;
+
+            @media screen and (min-width: $toggleDesktop) {
+                top: 0;
+                right: 100%;
+                left: inherit;
+            }
+        }
+
+        .events {
+            display: flex;
+            flex-direction: column;
+
+            .eventRow {
+                display: flex;
+                padding-top: 24px;
+                padding-bottom: 24px;
+                border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+
+                &:first-child {
+                    padding-top: 0;
+                }
+                &:last-child {
+                    padding-bottom: 0;
+                    border-bottom: none;
+                }
+                .time {
+                    width: 100px;
+                    flex-shrink: 0;
+                    color: #121212;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 900;
+                    line-height: 130%;
+                }
+
+                .details {
+                    .titleTab {
+                        text-align: left;
+                        color: #121212;
+                        font-size: 16px;
+                        font-style: normal;
+                        font-weight: 900;
+                        line-height: 130%;
+                    }
+
+                    .speakers {
+                        color: #121212;
+                        font-size: 18px;
+                        font-style: normal;
+                        font-weight: 900;
+                        line-height: 130%;
+
+                        .speakerName {
+                            color: #4E77D3;
+                            font-weight: 900;
+                            margin-right: 4px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

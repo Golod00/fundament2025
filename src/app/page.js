@@ -8,6 +8,7 @@ import PartnersSlider from '@/ui/blocks/PartnersSlider/PartnersSlider';
 import AttendingSummit from '@/ui/blocks/AttendingSummit/AttendingSummit';
 import JoinInstagram from '@/ui/blocks/JoinInstagram/JoinInstagram';
 import Speakers from '@/ui/blocks/Speakers/Speakers.jsx';
+import SummitProgram from '@/ui/blocks/SummitProgram/SummitProgram.jsx';
 import WhyWorth from '@/ui/blocks/WhyWorth/WhyWorth';
 import BuyTicket from '@/ui/blocks/BuyTicket/BuyTicket';
 import Modal from '@/ui/components/Modal/Modal';
@@ -24,6 +25,7 @@ export default async function Home() {
                 <WhyWorth />
                 <JoinInstagram />
                 <Speakers />
+                <SummitProgram />
                 <BuyTicket />
                 <PriceCalendar />
                 <SummitPartner />
