@@ -1,0 +1,42 @@
+.section {
+	padding-top: 46px;
+	padding-bottom: 46px;
+
+	@media screen and (min-width: $toggleDesktop) {
+		padding-top: 40px;
+		padding-bottom: 140px;
+	}
+
+	.description {
+		text-align: center;
+		color: #4E77D3;
+		text-align: center;
+		font-family: "NAMU";
+		font-size: 16px;
+		font-style: normal;
+		font-weight: 900;
+		line-height: 130%;
+		text-transform: uppercase;
+	}
+	.title {
+		margin-bottom: 32px;
+		text-align: center;
+		color: #121212;
+		text-align: center;
+		font-family: "NAMU";
+		font-size: 38px;
+		font-style: normal;
+		font-weight: 700;
+		line-height: 110%;
+	}
+
+	.wrapper {
+
+		.speakers {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: start;
+			gap: 20px;
+		}
+	}
+}

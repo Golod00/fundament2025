@@ -1,0 +1,268 @@
+.heroSection {
+    position: relative;
+    padding-top: 99px;
+    overflow: hidden;
+
+    @media screen and (min-width: $toggleDesktop) {
+        padding-top: 185px;
+        height: 100vh;
+        max-height: 800px;
+    }
+
+    .wrapBg {
+        position: absolute;
+        bottom: -3px;
+        left: 0;
+        width: 100%;
+        height: auto;
+        z-index: -1;
+
+        svg {
+            width: 100%;
+        }
+
+        .des {
+            display: none;
+
+            @media screen and (min-width: $toggleDesktop) {
+                display: block;
+            }
+        }
+
+        .mob {
+            @media screen and (min-width: $toggleDesktop) {
+                display: none;
+            }
+        }
+    }
+
+    .container {
+
+        @media screen and (min-width: $toggleDesktop) {
+            position: relative;
+            height: 100%;
+        }
+    }
+
+    .backgroundDes {
+        display: none;
+
+        @media screen and (min-width: $toggleDesktop) {
+            display: block;
+            position: absolute;
+            bottom: 0;
+            left: -49px;
+            z-index: -1;
+
+            img {
+                max-height: 621px;
+                height: 70vh;
+            }
+        }
+    }
+
+    .heroMain {
+
+        @media screen and (min-width: $toggleDesktop) {
+            display: flex;
+            align-items: flex-start;
+            gap: 60px;
+            padding-left: 261px;
+        }
+
+        .heroContent {
+
+            .wraptitle {
+                margin-bottom: 16px;
+
+                @media screen and (min-width: $toggleDesktop) {
+                    margin-bottom: 32px;
+                }
+
+                .description {
+                    margin-bottom: 6px;
+                    color: #4E77D3;
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 900;
+                    line-height: 130%;
+                    text-transform: uppercase;
+
+                    @media screen and (min-width: $toggleDesktop) {
+                        font-size: 16px;
+                    }
+                }
+
+                .title {
+                    color: #121212;
+                    font-size: 28px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: 130%;
+
+                    span {
+                        color: #4E77D3;
+                    }
+
+                    @media screen and (min-width: $toggleDesktop) {
+                        font-size: 38px;
+                        max-width: 610px;
+                    }
+                }
+            }
+
+            .wrapDop {
+                display: flex;
+                align-items: center;
+                gap: 29px;
+                margin-bottom: 24px;
+
+                .iconSvg {
+                    @media screen and (min-width: $toggleDesktop) {
+                        width: 148px;
+                        height: 51px;
+                    }
+                }
+
+                .calendar {
+                    display: flex;
+                    align-items: center;
+                    gap: 12px;
+
+                    p {
+                        color: #121212;
+                        font-size: 18px;
+                        font-style: normal;
+                        font-weight: 900;
+                        line-height: 130%;
+
+                        span {
+                            display: block;
+                        }
+                    }
+                }
+            }
+
+            .wrapBtn {
+                display: flex;
+                align-items: center;
+                gap: 16px;
+                margin-bottom: 15px;
+
+                .linkPart {
+                    padding: 10px 18px;
+                    border-radius: 8px;
+                    background: #E6E6E6;
+                    color: #383838;
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 900;
+                    line-height: 130%;
+                    transition: all .2s ease-in;
+
+                    &:hover {
+                       transform: scale(1.1);
+                    }
+                }
+            }
+
+            .wrapInfo {
+                display: flex;
+                align-items: center;
+                gap: 16px;
+
+                .content {
+                    color: #4E77D3;
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 900;
+                    line-height: 130%;
+
+                    span {
+                        color: #4E77D3;
+                    }
+                }
+            }
+        }
+
+        .wrapBlocBottom {
+            position: relative;
+            display: flex;
+            align-items: flex-end;
+        }
+
+        .blockSlider {
+            max-width: 168px;
+            margin-top: 132px;
+            padding-bottom: 16px;
+
+            @media screen and (min-width: $toggleDesktop) {
+                max-width: 255px;
+                margin-top: 33px;
+            }
+
+            .wrapSlide {
+                display: flex;
+                flex-direction: column;
+                padding: 24px;
+                border-radius: 28px;
+                border: 1px solid #F2F2F2;
+                background: rgba(255, 255, 255, 0.30);
+                backdrop-filter: blur(9px);
+
+                .titleSlider {
+                    margin-top: 24px;
+                    color: #121212;
+                    font-size: 16px;
+                    font-weight: 700;
+                    line-height: 130%;
+                }
+
+                .textSlider {
+                    margin-top: 8px;
+                    color: #616161;
+                    font-size: 12px;
+                    font-weight: 900;
+                    line-height: 130%;
+
+                    @media screen and (min-width: $toggleDesktop) {
+                        max-width: 150px;
+                    }
+                }
+            }
+        }
+
+        .background {
+            margin-bottom: 0;
+
+            @media screen and (min-width: $toggleDesktop) {
+                display: none;
+            }
+        }
+    }
+
+    .wrapSocia {
+        display: none;
+
+        @media screen and (min-width: $toggleDesktop) {
+            display: block;
+            position: absolute;
+            right: 0;
+            bottom: 30px;
+            display: flex;
+            align-items: center;
+            column-gap: 32px;
+
+            .link {
+
+                &:hover {
+                    transition: all .2s ease-in;
+
+                    svg {
+                        transform: scale(1.1);
+                    }
+                }
+            }
+        }
+    }
+}

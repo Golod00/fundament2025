@@ -1,0 +1,119 @@
+.attendingSummit {
+    position: relative;
+    padding-top: 80px;
+    padding-bottom: 299px;
+
+    @media screen and (min-width: $toggleDesktop) {
+        padding-bottom: 140px;
+    }
+
+    .container {
+        position: relative;
+    }
+
+    .mainBlock {
+
+        .description {
+            color: #4E77D3;
+            text-align: center;
+            font-size: 14px;
+            font-weight: 900;
+            line-height: 130%;
+            text-transform: uppercase;
+
+            @media screen and (min-width: $toggleDesktop) {
+                font-size: 16px;
+            }
+        }
+
+        .title {
+            color: #121212;
+            text-align: center;
+            font-size: 28px;
+            font-weight: 700;
+            line-height: 110%;
+
+            @media screen and (min-width: $toggleDesktop) {
+                font-size: 38px;
+            }
+        }
+
+        .wrapMain {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 8px;
+            margin-top: 32px;
+
+            @media screen and (min-width: $toggleDesktop) {
+                position: relative;
+                z-index: 99999;
+                max-width: 925px;
+                margin: 32px auto 0;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 16px 20px;
+            }
+
+            .item {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 24px 8px;
+                border-radius: 20px;
+                background: #E5F5FF;
+
+                @media screen and (min-width: $toggleDesktop) {
+                    flex-direction: row;
+                    justify-content: space-between;
+                    max-height: 138px;
+                    padding: 46px 32px;
+                    border-radius: 40px;
+                }
+
+                .itemTitle {
+                    max-width: 132px;
+                    min-height: 36px;
+                    margin: 0 auto;
+                    margin-bottom: 16px;
+                    color: #121212;
+                    text-align: center;
+                    font-size: 14px;
+                    font-weight: 900;
+                    line-height: 130%;
+
+                    @media screen and (min-width: $toggleDesktop) {
+                        margin: 0;
+                        text-align: left;
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+    }
+
+    .wrapBgIcon {
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: -1;
+
+        @media screen and (min-width: $toggleDesktop) {
+            top: inherit;
+            left: inherit;
+            right: -50px;
+            bottom: 166px;
+            transform: inherit;
+            z-index: 9999;
+            height: 100%;
+        }
+
+        svg {
+            width: auto;
+            height: 357px;
+
+            @media screen and (min-width: $toggleDesktop) {
+                height: 699px;
+            }
+        }
+    }
+}

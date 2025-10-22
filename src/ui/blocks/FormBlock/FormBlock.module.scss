@@ -1,0 +1,57 @@
+.formBlock {
+    position: relative;
+    padding-top: 72px;
+    padding-bottom: 352px;
+
+    @media screen and (min-width: $toggleDesktop) {
+        min-height: 836px;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    .bg {
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+
+        img {
+            height: 100%;
+        }
+    }
+
+    .containerForm {
+        @media screen and (min-width: $toggleDesktop) {
+            padding-top: 134px;
+        }
+    }
+
+    .description {
+        color: #4E77D3;
+        text-align: center;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 900;
+        line-height: 130%;
+        text-transform: uppercase;
+
+        @media screen and (min-width: $toggleDesktop) {
+            font-size: 16px;
+        }
+    }
+
+    .title {
+        margin-bottom: 32px;
+        color: #121212;
+        text-align: center;
+        font-size: 28px;
+        font-weight: 700;
+        line-height: 110%;
+
+        @media screen and (min-width: $toggleDesktop) {
+            font-size: 38px;
+        }
+    }
+}

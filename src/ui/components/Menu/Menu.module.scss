@@ -1,0 +1,98 @@
+.container {
+    display: flex;
+    flex-direction: column;
+
+    @media screen and (min-width: $toggleDesktop) {
+        flex-direction: row;
+        column-gap: 16px;
+    }
+}
+
+.navigation {
+    position: relative;
+    z-index: 20;
+}
+
+.blockBtn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+
+  .HeaderInfo {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 5px;
+      margin-top: 8px;
+
+      .content {
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 900;
+          line-height: 130%;
+          color: #616161;
+
+          span {
+            color: $color-accent;
+          }
+      }
+  }
+
+  .aditionalLinks {
+
+  }
+
+  @media screen and (min-width: $toggleDesktop) {
+    display: none;
+  }
+}
+
+.logoWrapper {
+    padding: 16px;
+
+    @media screen and (min-width: $toggleDesktop) {
+        display: none;
+    }
+
+    a svg {
+        width: auto;
+        height: 50px;
+
+        @media screen and (min-width: $toggleDesktop) {
+          height: 83px;
+        }
+    }
+}
+
+.wrapperNavMain {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: 48px;
+
+   .aditionalLinks {
+        max-width: max-content;
+        margin: 0 auto;
+
+        @media screen and (min-width: $toggleDesktop) {
+            display: none;
+        }
+    }
+}
+
+.link {
+  display: block;
+  padding: 23px;
+  text-align: center;
+  color: #121212;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 130%;
+
+    &:hover {
+        color: $color-accent;
+    }
+}

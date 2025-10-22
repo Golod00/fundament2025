@@ -1,0 +1,264 @@
+.section {
+    padding-top: 46px;
+    padding-bottom: 46px;
+    background: #4E77D3;
+
+    @media screen and (min-width: $toggleDesktop) {
+        padding-top: 80px;
+        padding-bottom: 99px;
+    }
+
+    .sectionMain {
+
+        .sectionContent {
+
+            @media screen and (min-width: $toggleDesktop) {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+
+            .wrapperTitle {
+                margin-bottom: 24px;
+
+                @media screen and (min-width: $toggleDesktop) {
+                    margin-bottom: 0;
+                }
+
+                .title {
+                    margin-bottom: 8px;
+                    color: #FFF;
+                    font-size: 28px;
+                    font-weight: 700;
+                    line-height: 130%;
+
+                    @media screen and (min-width: $toggleDesktop) {
+                        font-size: 38px;
+                    }
+                }
+
+                .des {
+                    color: #FFF;
+                    font-size: 16px;
+                    font-weight: 900;
+                    line-height: 130%;
+
+                    @media screen and (min-width: $toggleDesktop) {
+                        font-size: 24px;
+                    }
+
+                    span {
+                        color: #A8D7F4;
+                    }
+                }
+            }
+
+            .wrapperTime {
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+
+                @media screen and (min-width: $toggleDesktop) {
+                    align-items: flex-end;
+                }
+
+                .timeText {
+                    color: #FFF;
+                    font-size: 16px;
+                    font-weight: 900;
+                    line-height: 130%;
+
+                    @media screen and (min-width: $toggleDesktop) {
+                        font-size: 18px;
+                    }
+                }
+
+                .descriptionTime {
+                    display: flex;
+                    align-items: center;
+                    min-width: 246px;
+                    width: max-content;
+                    column-gap: 24px;
+                    padding: 13px 24px;
+                    border-radius: 17px;
+                    background: #648FEE;
+
+                    span {
+                        color: #FFF;
+                        font-size: 24px;
+                        font-weight: 900;
+                        line-height: 130%;
+
+                        @media screen and (min-width: $toggleDesktop) {
+
+                        }
+                    }
+                }
+            }
+        }
+
+        .dots {
+            display: flex;
+            width: 100%;
+            column-gap: 20px;
+            margin: 24px 0;
+            overflow: hidden;
+
+            @media screen and (min-width: $toggleDesktop) {
+                margin: 16px 0 24px;
+            }
+        }
+
+        .dot {
+            min-width: 13px;
+            height: 13px;
+            border-radius: 50%;
+            background-color: #4E77D3;
+        }
+
+        .mainBlock {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            margin-top: 32px;
+
+            @media screen and (min-width: $toggleDesktop) {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                margin-top: 60px;
+            }
+
+            .mainItemWrap {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                padding: 24px;
+                background: #FFF;
+
+                @media screen and (min-width: $toggleDesktop) {
+                    width: 100%;
+                    max-width: 400px;
+                    padding: 24px 24px 32px 24px;
+                }
+
+                .btn {
+                    margin: 0 auto;
+                }
+            }
+
+            .mainItem {
+
+                .topWrap {
+
+                    @media screen and (min-width: $toggleDesktop) {
+                        min-height: 128px;
+                    }
+
+                    .topTitle {
+                        margin-bottom: 16px;
+                        color: #4E77D3;
+                        font-family: "NAMU";
+                        font-size: 28px;
+                        font-weight: 700;
+                        line-height: 90%;
+
+                        @media screen and (min-width: $toggleDesktop) {
+                            max-width: 250px;
+                            font-size: 38px;
+                        }
+                    }
+
+                    .topTitleInfo {
+                        margin-top: 8px;
+                        color: #121212;
+                        font-size: 16px;
+                        font-weight: 700;
+                        line-height: 90%;
+
+                        @media screen and (min-width: $toggleDesktop) {
+                            margin-top: 0;
+                            font-size: 18px;
+                        }
+                    }
+
+                    .topPrice {
+                        display: flex;
+                        align-items: center;
+                        column-gap: 16px;
+
+                        .price {
+                            padding: 10px 16px;
+                            border-radius: 100px;
+                            color: #FFF;
+                            font-size: 16px;
+                            font-weight: 900;
+                            line-height: 130%;
+                            background: #4E77D3;
+
+                            @media screen and (min-width: $toggleDesktop) {
+                                font-size: 18px;
+                            }
+                        }
+
+                        .priceOld {
+                            color: #A8D7F4;
+                            font-size: 16px;
+                            font-weight: 900;
+                            line-height: 130%;
+                            text-decoration-line: line-through;
+                        }
+                    }
+                }
+
+                .bottomWrap {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+
+                    .list {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 24px;
+                        margin-bottom: 32px;
+                        padding-left: 23px;
+
+                        @media screen and (min-width: $toggleDesktop) {
+                            max-width: 310px;
+                        }
+
+                        .listItem {
+                            position: relative;
+                            color: #121212;
+                            font-size: 16px;
+                            font-weight: 900;
+                            line-height: 130%;
+
+                            @media screen and (min-width: $toggleDesktop) {
+                                font-size: 18px;
+                            }
+
+                            &::before {
+                                content: '';
+                                position: absolute;
+                                top: 9px;
+                                left: -14px;
+                                width: 4px;
+                                height: 4px;
+                                border-radius: 50%;
+                                background: #121212;
+                            }
+
+                            &.colorText {
+                                color: #616161;
+                            }
+                        }
+                    }
+
+                    .btn {
+                        margin: 0 auto;
+                    }
+                }
+            }
+        }
+    }
+}

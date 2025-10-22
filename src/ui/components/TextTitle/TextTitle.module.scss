@@ -1,0 +1,6 @@
+.element {
+    opacity: 0;
+    filter: blur(10px);
+    transform: translateY(40px);
+    will-change: opacity, transform, filter;
+}

@@ -1,0 +1,110 @@
+.success {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  padding: 0 16px;
+  background: #4E77D3;
+  overflow: hidden;
+
+  .successMain {
+    position: relative;
+    max-width: 540px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 24px;
+    border-radius: 20px;
+    background: #FFF;
+    z-index: 1;
+
+    @media screen and (min-width: 768px) {
+      padding: 32px 46px;
+      border-radius: 60px;
+    }
+  }
+  .successTitle {
+    margin-bottom: 16px;
+    color: #4E77D3;
+    text-align: center;
+    font-family: "NAMU";
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 130%;
+
+    @media screen and (min-width: $toggleDesktop) {
+      font-size: 38px;
+    }
+  }
+
+  .successDescription {
+    margin-bottom: 24px;
+    color: #121212;
+    text-align: center;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 130%;
+
+    @media screen and (min-width: 768px) {
+      max-width: 470px;
+      font-size: 18px;
+    }
+  }
+
+  .bgWrapTop {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: auto;
+    z-index: 0;
+
+    @media screen and (min-width: $toggleDesktop) {
+      top: -100px;
+    }
+
+    svg {
+      width: 100%;
+      height: auto;
+      max-height: 243px;
+
+      @media screen and (min-width: 768px) {
+        max-height: 500px;
+      }
+    }
+  }
+
+  .bgMobWrap,
+  .bgPcWrap {
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    width: 100%;
+    height: auto;
+    z-index: 0;
+
+    svg {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .bgMobWrap {
+
+    @media screen and (min-width: $toggleDesktop) {
+      display: none;
+    }
+  }
+
+  .bgPcWrap {
+    display: none;
+
+    @media screen and (min-width: $toggleDesktop) {
+      display: block;
+    }
+  }
+}

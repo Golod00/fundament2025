@@ -1,0 +1,27 @@
+{
+  "name": "fundament2025",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --turbopack",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "gsap": "^3.13.0",
+    "next": "^15.5.4",
+    "nodemailer": "^7.0.6",
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
+    "react-input-mask": "^2.0.4",
+    "reset-css": "^5.0.2",
+    "swiper": "^11.2.10"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3",
+    "eslint": "^9",
+    "eslint-config-next": "15.4.6",
+    "sass": "^1.90.0"
+  }
+}

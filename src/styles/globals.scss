@@ -1,0 +1,49 @@
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: 'NAMU Pro', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1;
+    min-width: 375px;
+    overflow-x: hidden;
+
+    * {
+        box-sizing: border-box;
+        transition: 0.3s ease all;
+    }
+}
+
+main {
+    overflow: hidden;
+}
+
+.container {
+    @include container;
+    padding: 0 16px;
+
+    @media screen and (min-width: $toggleDesktop) {
+        padding: 0 0;
+        width: $container-width;
+    }
+}
+
+h1, h2, h3 {
+    font-family: "NAMU", sans-serif;
+    font-weight: 900;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+button {
+    outline: none;
+    border: none;
+}

@@ -1,0 +1,168 @@
+.wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-inline: 16px;
+    z-index: 999999;
+    background-color: #fff;
+
+    @media screen and (min-width: $toggleDesktop) {
+        left: 50%;
+        transform: translateX(-50%);
+
+        &.sidePage {
+            transform: translateX(0);
+        }
+    }
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 16px 0;
+
+    @media screen and (min-width: $toggleDesktop) {
+        padding: 24px 0;
+    }
+
+    a {
+        svg {
+            width: auto;
+            height: 50px;
+
+            @media screen and (min-width: $toggleDesktop) {
+                height: 83px;
+            }
+        }
+    }
+
+    .burgerButton {
+        background-color: transparent;
+
+        @media screen and (min-width: $toggleDesktop) {
+            display: none;
+        }
+    }
+
+    .HeaderMenuContainer {
+        display: none;
+
+        @media screen and (min-width: $toggleDesktop) {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+
+            .HeaderInfo {
+                display: flex;
+                gap: 16px;
+                margin-top: 8px;
+            }
+        }
+    }
+
+    .mobWap {
+        display: flex;
+        align-items: center;
+        column-gap: 16px;
+
+        @media screen and (min-width: $toggleDesktop) {
+            display: none;
+        }
+
+        .aditionalLinks {
+            padding: 0;
+
+            button {
+                font-size: 14px;
+            }
+        }
+    }
+}
+
+.HeaderInfo {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 5px;
+
+    .content {
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 900;
+        line-height: 130%;
+        color: #616161;
+
+        span {
+            color: $color-accent;
+        }
+    }
+
+    @media screen and (min-width: $toggleDesktop) {
+        display: none;
+    }
+}
+
+.mobileMenu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background: #E5F5FF;
+    opacity: 0;
+    z-index: -1;
+
+    @media screen and (min-width: $toggleDesktop) {
+        display: none;
+    }
+
+    &.active {
+        opacity: 1;
+        z-index: 999999999;
+    }
+
+    .mobileMenuHeader {
+        position: sticky;
+        top: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 16px;
+        background: #E5F5FF;
+        z-index: 10;
+
+        a {
+            svg {
+                width: auto;
+                height: 50px;
+            }
+        }
+        .close {
+            border: none;
+            background: #E5F5FF;
+            cursor: pointer;
+        }
+    }
+
+    .mobileMenuContent {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+        flex: 1;
+        padding: 16px 16px 60px;
+        overflow-y: auto;
+
+        .wrapSocia {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            column-gap: 32px;
+            margin-top: 134px;
+        }
+    }
+}

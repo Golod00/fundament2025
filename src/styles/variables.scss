@@ -1,0 +1,52 @@
+// Colors
+$color-primary: #222121;
+$color-accent: #4E77D3;
+$color-dark: #000;
+$color-white: #fff;
+$color-grey: #313030;
+$color-light: #3A3A3A;
+$color-text: #1B1B1B;
+
+// Fonts
+$font-main: 'NAMU', sans-serif;
+
+// Containers
+$container-widthTable: 720px;
+$container-width: 1240px;
+$transition-speed: 0.3s;
+$paddingBlock: 80px;
+$paddingBlockDesktop: 80px;
+
+//Trigers
+$toggleTablet: 768px;
+$toggleDesktop: 1240px;
+
+@mixin container {
+    margin: 0 auto;
+    
+    @media screen and (min-width: $toggleTablet) {
+        max-width: $container-widthTable;
+    }
+
+    @media screen and (min-width: $toggleDesktop) {
+        max-width: $container-width;
+    }
+}
+
+@mixin customScrollerPad {
+    &::-webkit-scrollbar {
+        width: 4px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: $color-accent;
+    }
+    & * {
+        scrollbar-width: thin;
+        scrollbar-color: $color-accent transparent;
+    }
+}

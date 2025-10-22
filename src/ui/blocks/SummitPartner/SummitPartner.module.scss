@@ -1,0 +1,84 @@
+.section {
+    position: relative;
+    margin-bottom: 80px;
+    padding-right: 16px;
+    padding-left: 16px;
+    overflow: hidden;
+
+    .sectionMain {
+        padding: 46px 8px 0;
+        background: linear-gradient(15deg, #AEC7FF 4%, #E5F5FF 61%, #FFF 157.97%);
+
+        @media screen and (min-width: $toggleDesktop) {
+            display: flex;
+            flex-direction: row-reverse;
+            max-width: 1030px;
+            margin: 0 auto;
+            padding: 46px 76px 0 8px;
+            background: linear-gradient(100deg, #AEC7FF 0.64%, #E5F5FF 64.55%, #FFF 173.28%);
+
+            .container {
+                min-width: 436px;
+            }
+        }
+
+        .sectionContent {
+
+            .title {
+                margin-bottom: 16px;
+                color: #4E77D3;
+                font-size: 24px;
+                font-weight: 700;
+                line-height: 110%;
+
+                @media screen and (min-width: $toggleDesktop) {
+                    max-width: 400px;
+                    margin-bottom: 24px;
+                    font-size: 38px;
+                }
+            }
+
+            .description {
+                margin-bottom: 32px;
+                color: #616161;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 900;
+                line-height: 130%;
+
+                @media screen and (min-width: $toggleDesktop) {
+                    margin-bottom: 24px;
+                    font-size: 16px;
+                }
+            }
+
+            .formWrap {
+
+            }
+        }
+
+        .sectionImg {
+            position: relative;
+            right: -24px;
+            bottom: -5px;
+
+            @media screen and (min-width: $toggleDesktop) {
+                right: initial;
+                left: -50px;
+            }
+
+            img {
+                min-height: 270px;
+
+                @media screen and (min-width: $toggleDesktop) {
+                    max-height: 454px;
+                    width: auto;
+                }
+            }
+        }
+    }
+
+    .heroMain {
+
+    }
+}

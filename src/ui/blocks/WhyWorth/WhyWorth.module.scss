@@ -1,0 +1,155 @@
+.attendingSummit {
+    position: relative;
+    padding-top: 46px;
+    padding-bottom: 279px;
+    background: #B7E4FF;
+
+    @media screen and (min-width: $toggleDesktop) {
+        padding-top: 78px;
+        padding-bottom: 80px;
+    }
+
+    .mainBlock {
+
+        .description {
+            color: #121212;
+            text-align: center;
+            font-size: 28px;
+            font-weight: 700;
+            line-height: 110%;
+
+            @media screen and (min-width: $toggleDesktop) {
+                font-size: 38px;
+            }
+        }
+
+        .title {
+            color: #4E77D3;
+            text-align: center;
+            font-size: 28px;
+            font-weight: 700;
+            line-height: 110%;
+
+            @media screen and (min-width: $toggleDesktop) {
+                font-size: 38px;
+            }
+        }
+
+        .wrapMain {
+            position: relative;
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            gap: 16px;
+            margin-top: 63px;
+            z-index: 1;
+
+            @media screen and (min-width: 768px) {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 58px 60px;
+            }
+
+            @media screen and (min-width: $toggleDesktop) {
+                grid-template-columns: repeat(3, 1fr);
+                max-width: 1100px;
+                margin: 56px auto 0;
+            }
+
+            .item {
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                max-height: 135px;
+                padding: 32px 24px;
+                border-radius: 16px;
+                background: #fff;
+
+                @media screen and (min-width: $toggleDesktop) {
+                    max-height: 138px;
+                }
+
+                .itemTitle {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 4px;
+
+                    @media screen and (min-width: $toggleDesktop) {
+
+                    }
+
+                    .titleText {
+                        max-width: 169px;
+                        margin-bottom: 4px;
+                        color: #4E77D3;
+                        font-size: 24px;
+                        font-style: normal;
+                        font-weight: 900;
+                        line-height: 90%;
+
+                        @media screen and (min-width: $toggleDesktop) {
+
+                        }
+                    }
+
+                    .info {
+                        max-width: 169px;
+                        color: #121212;
+                        font-size: 16px;
+                        font-weight: 900;
+                        line-height: 100%;
+
+                        @media screen and (min-width: $toggleDesktop) {
+                            font-size: 18px;
+                        }
+                    }
+                }
+                .wrapImg {
+                    position: absolute;
+                    bottom: -20px;
+                    right: -14px;
+
+                    img {
+                        min-height: 190px;
+                    }
+                }
+            }
+        }
+    }
+
+
+    .wrapBgIconMob {
+
+        @media screen and (min-width: $toggleDesktop) {
+            display: none;
+        }
+    }
+
+    .wrapBgIconPc {
+        display: none;
+
+        @media screen and (min-width: $toggleDesktop) {
+            display: block;
+        }
+    }
+
+    .wrapBgIconMob,
+    .wrapBgIconPc {
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        z-index: 0;
+        width: 100%;
+
+        @media screen and (min-width: $toggleDesktop) {
+        }
+
+        svg {
+            width: 100%;
+            height: auto;
+
+            @media screen and (min-width: $toggleDesktop) {
+                max-height: 530px;
+            }
+        }
+    }
+}

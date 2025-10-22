@@ -1,0 +1,131 @@
+.section {
+    position: relative;
+    min-height: 696px;
+
+    @media screen and (min-width: $toggleDesktop) {
+        min-height: 443px;
+    }
+
+    .sectionMain {
+        padding-top: 60px;
+
+        .sectionContent {
+
+            .title {
+                display: block;
+                margin-bottom: 32px;
+                color: $color-white;
+                text-align: center;
+                font-size: 38px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 110%;
+
+                @media screen and (min-width: $toggleDesktop) {
+                    text-align: left;
+                    width: max-content;
+                }
+            }
+
+            .wrapper {
+                padding: 32px 22px 39px 24px;
+                border-radius: 8px;
+                background: #E5F5FF;
+                box-shadow: 4px 0 18px 0 rgba(0, 0, 0, 0.15);
+
+                @media screen and (min-width: $toggleDesktop) {
+                    max-width: 400px;
+                    width: 100%;
+                }
+
+                .wrapTitle {
+                    display: grid;
+                    grid-template-columns: repeat(2, auto);
+                    justify-content: space-between;
+                    color: #4E77D3;
+                    font-size: 24px;
+                    font-weight: 900;
+                    line-height: 130%;
+
+                    @media screen and (min-width: $toggleDesktop) {
+
+                        span {
+                            max-width: 220px;
+                        }
+                    }
+
+                    a {
+                        color: #4e77d3;
+                        font-size: 24px;
+                        font-weight: 900;
+                        line-height: 130%;
+                        transition: all .3s ease;
+                    }
+                }
+
+                .wrapInfo,
+                .wrapDescription {
+
+                    &.styleText {
+                        color: #121212;
+                        font-size: 16px;
+                        font-style: normal;
+                        font-weight: 900;
+                        line-height: 130%;
+                    }
+                }
+
+                .wrapInfo {
+                    margin-top: 8px;
+
+                    @media screen and (min-width: $toggleDesktop) {
+                        max-width: 254px;
+                    }
+                }
+
+                .wrapDescription {
+                    margin-top: 24px;
+
+                    @media screen and (min-width: $toggleDesktop) {
+                        max-width: 350px;
+                    }
+                }
+            }
+        }
+
+        .sectionImg {
+            position: absolute;
+            top: -10px;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+
+            img {
+                height: 100%;
+            }
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 418px;
+                border-radius: 871px;
+                filter: blur(70px);
+                background: #171937;
+                z-index: 1;
+
+                @media screen and (min-width: $toggleDesktop) {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    .heroMain {
+
+    }   
+
+}

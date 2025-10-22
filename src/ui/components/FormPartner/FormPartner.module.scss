@@ -1,0 +1,79 @@
+.formWrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .form {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+
+        @media screen and (min-width: $toggleDesktop) {
+            width: 100%;
+        }
+
+        .formMainWrap {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+
+            @media screen and (min-width: $toggleDesktop) {
+                flex-direction: row;
+                flex-wrap: wrap;
+            }
+        }
+        .wrap {
+            position: relative;
+
+            .input {
+                width: 100%;
+                padding: 12px 10px;
+                border-radius: 8px;
+                border: 1px solid #E6E6E6;
+                background: #FFF;
+                color: #616161;
+                font-size: 16px;
+                //font-weight: 900;
+                line-height: 130%;
+
+                &::placeholder {
+                    color: #616161;
+                }
+
+                &:focus {
+                    outline: none;
+                }
+
+                &.inputError {
+                    border: 1px solid red;
+                }
+            }
+
+            .error {
+                color: red;
+                font-size: 10px;
+                position: absolute;
+                top: 100%;
+            }
+        }
+
+        .btn {
+            width: max-content;
+            margin: 24px auto 0;
+            padding: 10px 18px;
+            border-radius: 8px;
+            background: #4E77D3;
+            color: $color-white;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 900;
+            line-height: 130%;
+            cursor: pointer;
+
+            @media screen and (min-width: $toggleDesktop) {
+                margin: 18px auto 0;
+            }
+        }
+    }
+}

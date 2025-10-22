@@ -1,0 +1,36 @@
+.oferta {
+  padding-top: 185px;
+  padding-bottom: 80px;
+  color: #111;
+
+  @media screen and (min-width: $toggleDesktop) {
+    padding-top: 185px;
+  }
+
+  .container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+}
+
+.content {
+  font-size: 16px;
+  line-height: 1.7;
+  white-space: pre-line;
+
+  .title {
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 130%;
+
+    @media screen and (min-width: $toggleDesktop) {
+      font-size: 38px;
+    }
+  }
+
+  a {
+    color: #4e77d3;
+  }
+}

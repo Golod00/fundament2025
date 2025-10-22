@@ -1,0 +1,118 @@
+.joinInstagram {
+    padding-top: 46px;
+    padding-bottom: 46px;
+
+    @media screen and (min-width: $toggleDesktop) {
+        padding-top: 80px;
+        padding-bottom: 100px;
+    }
+
+    .mainBlock {
+
+        @media screen and (min-width: $toggleDesktop) {
+            display: flex;
+            max-width: 1038px;
+            margin: 0 auto;
+        }
+
+        .blockContent {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+
+            @media screen and (min-width: $toggleDesktop) {
+                gap: 32px;
+                min-width: 556px;
+                padding-top: 46px;
+                padding-bottom: 46px;
+            }
+
+            .wrapTitle {
+                display: flex;
+                flex-direction: column;
+                .subTitle {
+                    color: $color-accent;
+                    font-family: "NAMU";
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 900;
+                    line-height: 130%;
+                    text-transform: uppercase;
+                }
+
+                .title {
+                    color: #121212;
+                    font-family: "NAMU";
+                    font-size: 38px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: 110%;
+                }
+            }
+
+            .wrapDescription {
+                display: flex;
+                flex-direction: column;
+                gap: 24px;
+
+                @media screen and (min-width: $toggleDesktop) {
+                    gap: 32px;
+                }
+
+                .text {
+                    color: #121212;
+                    font-size: 18px;
+                    font-style: normal;
+                    font-weight: 900;
+                    line-height: 130%;
+
+                    br {
+                        display: none;
+
+                        @media screen and (min-width: $toggleDesktop) {
+                            display: block;
+                        }
+                    }
+                }
+            }
+        }
+
+        .blockWrap {
+            position: relative;
+
+            @media screen and (min-width: $toggleDesktop) {
+                margin-left: -41px;
+            }
+
+            .wrapImage {
+
+                img {
+                    @media screen and (min-width: $toggleDesktop) {
+                        width: 525px;
+                    }
+                }
+            }
+
+            .wrapIcon {
+                position: absolute;
+                bottom: -55px;
+                right: 0;
+                z-index: -1;
+
+                @media screen and (min-width: $toggleDesktop) {
+                    bottom: 24px;
+                    right: -62px;
+                }
+
+                svg {
+                    width: 150px;
+
+                    @media screen and (min-width: $toggleDesktop) {
+                        width: 258px;
+                        height: 258px;
+                    }
+                }
+            }
+        }
+    }
+}
