@@ -19,20 +19,22 @@ jobs:
           node-version: 20
 
       - name: Install dependencies
-        run: npm install
+        run: npm ci
 
       - name: Build project
         run: npm run build
 
-      - name: Deploy to VPS
+      - name: Deploy files to VPS
         uses: appleboy/scp-action@v0.1.7
         with:
           host: ${{ secrets.VPS_HOST }}
           username: ${{ secrets.VPS_USER }}
           key: ${{ secrets.DEPLOY_KEY }}
           port: 22
-          source: "public/,src/,package.json,package-lock.json,next.config.mjs"
+          source: ".next/**,public/**,package.json,package-lock.json,next.config.mjs"
           target: "/var/www/fundament2025/fundament2025"
+          strip_components: 0
+          rm: true
 
       - name: Restart PM2
         uses: appleboy/ssh-action@v0.1.7
