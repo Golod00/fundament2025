@@ -7,24 +7,6 @@ import TextTitle from '@/ui/components/TextTitle/TextTitle';
 export default function BuyTicket() {
     const mainItemRefs = [useRef(null), useRef(null), useRef(null)];
     const [dotsCounts, setDotsCounts] = useState([0, 0, 0]);
-    const [timeLeft, setTimeLeft] = useState({
-        days: 0,
-        hours: 0,
-        minutes: 0,
-        seconds: 0,
-        finished: false
-    });
-    const [endTime, setEndTime] = useState(null);
-    const finishedText = 'Акція закінчилась';
-
-    useEffect(() => {
-        const now = new Date();
-        const end = new Date(now);
-        end.setDate(end.getDate() + 5);
-        end.setHours(23, 59, 59, 999);
-        end.setHours(end.getHours() - 1); // минус 1 час
-        setEndTime(end);
-    }, []);
 
     useEffect(() => {
         function updateDots() {
@@ -43,29 +25,6 @@ export default function BuyTicket() {
         return () => window.removeEventListener('resize', updateDots);
     }, []);
 
-    useEffect(() => {
-        if (!endTime) return;
-        const interval = setInterval(() => {
-            const now = new Date();
-            const distance = endTime - now;
-
-            if (distance <= 0) {
-                clearInterval(interval);
-                setTimeLeft({ finished: true, days: 0, hours: 0, minutes: 0, seconds: 0 });
-                return;
-            }
-
-            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((distance / (1000 * 60 * 60)) % 24);
-            const minutes = Math.floor((distance / (1000 * 60)) % 60);
-            const seconds = Math.floor((distance / 1000) % 60);
-
-            setTimeLeft({ days, hours, minutes, seconds, finished: false });
-        }, 1000);
-
-        return () => clearInterval(interval);
-    }, [endTime]);
-
     return (
         <section id="about-event" className={classes.section}>
             <div className="container">
@@ -79,22 +38,9 @@ export default function BuyTicket() {
                         </div>
 
                         <div className={classes.wrapperTime}>
-                            <p className={classes.timeText}>До підвищення цін залишилось:</p>
-                            <p className={classes.descriptionTime}>
-                                {timeLeft.finished ? (
-                                    <span className={classes.finished}>{finishedText}</span>
-                                ) : (
-                                    <>
-                                        <span className={classes.timeDay}>{timeLeft.days} днів</span>
-                                        <span className={classes.timeNumbers}>
-                                            {String(timeLeft.hours).padStart(2,'0')}:
-                                            {String(timeLeft.minutes).padStart(2,'0')}:
-                                            {String(timeLeft.seconds).padStart(2,'0')}
-                                        </span>
-                                    </>
-                                )}
-                            </p>
+                            <p className={classes.descriptionTime}>Зараз дешевше до -20%</p>
                         </div>
+
                     </div>
 
                     <div className={classes.mainBlock}>
